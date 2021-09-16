@@ -1,0 +1,65 @@
+.header {
+    
+    background-image: url("/images/image-hero-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    height: 63vh;
+    width: auto;
+    
+    nav {
+
+        padding: 3rem 10.25rem;
+
+        @include breakpoint-down(medium) {
+            padding: 2.5rem;
+        }
+
+        @include breakpoint-down(small) {
+            padding: 2rem;
+        }
+
+    }
+    
+    a {
+        > span {
+
+            background-color: white;
+            border-radius: 2px;
+            display: block;
+            
+            height: 4px;
+            width: 20px;
+
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    &-links {
+
+        a {
+            color: $white;
+            font-size: $fontXSmall;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        
+        }
+
+    }
+
+    @include breakpoint-down(medium) {
+        height: 45vh;
+    }
+
+    @include breakpoint-down(small) {
+        background-image: url("/images/image-hero-mobile.jpg");
+    }
+    
+}
