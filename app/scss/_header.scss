@@ -6,19 +6,19 @@
     background-size: cover;
     
 
-    height: 63vh;
+    height: 54vh;
     width: auto;
     
     nav {
 
-        padding: 3rem 10.25rem;
+        padding: 3rem 10.8rem;
 
         @include breakpoint-down(medium) {
             padding: 2.5rem;
         }
 
         @include breakpoint-down(small) {
-            padding: 2rem;
+            padding: 2rem 1.5rem;
         }
 
     }
@@ -60,6 +60,8 @@
 
     @include breakpoint-down(small) {
         background-image: url("/images/image-hero-mobile.jpg");
+        height: 40vh;
+        width: auto;
     }
     
 }
