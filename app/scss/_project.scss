@@ -1,15 +1,5 @@
 .project {
-
-    background-color: $white;
-    border-radius: 8px;
-    box-shadow: 0 0 1px $darkGray;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    padding: 50px;
     position: relative;
-    top: 0;
-    bottom:0;
     
     &-logo {
         position: absolute;
@@ -44,9 +34,6 @@
     }
 
     &-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin-top: 2rem;     
         
         @include breakpoint-down(large) {
@@ -55,9 +42,7 @@
     }
 
     &-button-container {
-        display: flex;
-        align-items: center;
-
+        
         img {
             position: relative;
             left: 20%;
@@ -75,6 +60,6 @@
     }
 
     @include breakpoint-down(small) {
-        padding: 25px 12.25px;
+        padding: 1.5625rem 0.7656rem;
     }
 }

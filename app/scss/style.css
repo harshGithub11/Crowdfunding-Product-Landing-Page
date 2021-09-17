@@ -93,6 +93,19 @@ a, a:visited, a:hover {
   color: black;
 }
 
+.card {
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 0 0.1px #7a7a7a;
+          box-shadow: 0 0 0 0.1px #7a7a7a;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1.25rem;
+  padding: 3.125rem;
+}
+
 .header {
   background-image: url("/images/image-hero-desktop.jpg");
   background-position: center;
@@ -159,9 +172,6 @@ a, a:visited, a:hover {
 
 .content-area {
   border-radius: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -200,22 +210,7 @@ a, a:visited, a:hover {
 }
 
 .project {
-  background-color: white;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 0 1px #7a7a7a;
-          box-shadow: 0 0 1px #7a7a7a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 10px;
-  padding: 50px;
   position: relative;
-  top: 0;
-  bottom: 0;
 }
 
 .project-logo {
@@ -256,15 +251,6 @@ a, a:visited, a:hover {
 }
 
 .project-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 2rem;
 }
 
@@ -272,15 +258,6 @@ a, a:visited, a:hover {
   .project-buttons {
     margin: 2rem auto 0 auto;
   }
-}
-
-.project-button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .project-button-container img {
@@ -300,7 +277,135 @@ a, a:visited, a:hover {
 
 @media (max-width: 39.9375em) {
   .project {
-    padding: 25px 12.25px;
+    padding: 1.5625rem 0.7656rem;
   }
+}
+
+.statistics {
+  /*
+        border-right to be applied to all the divs 
+        except the last one
+    */
+  /* 
+        padding to be applied for the second and 
+        third div only
+    */
+}
+
+.statistics .details {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 87.4375em) {
+  .statistics .details {
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .statistics .details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.statistics .details > div:not(:last-child) {
+  border-right: solid 1px rgba(20, 9, 9, 0.3);
+}
+
+@media (max-width: 39.9375em) {
+  .statistics .details > div:not(:last-child) {
+    border-right: none;
+  }
+  .statistics .details > div:not(:last-child)::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 35%;
+    padding-top: 1.25rem;
+    border-bottom: 1px solid rgba(20, 9, 9, 0.3);
+  }
+}
+
+.statistics .details > div:not(:first-child) {
+  padding: 0 6rem 0 3rem;
+}
+
+@media (max-width: 87.4375em) {
+  .statistics .details > div:not(:first-child) {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .statistics .details > div:not(:first-child) {
+    padding-bottom: 1.25rem;
+  }
+}
+
+.statistics-block {
+  padding-right: 3.125rem;
+}
+
+.statistics-block h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+@media (max-width: 39.9375em) {
+  .statistics-block h2 {
+    font-size: 1.4rem;
+  }
+}
+
+.statistics-block p {
+  color: #7a7a7a;
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 39.9375em) {
+  .statistics-block p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 87.4375em) {
+  .statistics-block {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .statistics-block {
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .statistics {
+    padding: 1.5rem;
+  }
+}
+
+.statistics .indicator {
+  background: rgba(20, 9, 9, 0.08);
+  border-radius: 0.75rem;
+  height: 0.8rem;
+  margin-top: 2.5rem;
+}
+
+.statistics .indicator-filled {
+  background-color: #3cb4ac;
+  border-radius: 0.75rem;
+  display: inline-block;
+  width: 80%;
 }
 /*# sourceMappingURL=style.css.map */
