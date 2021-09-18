@@ -199,6 +199,7 @@ a, a:visited, a:hover {
 @media (max-width: 63.9375em) {
   .content-area {
     top: -80px;
+    width: 75%;
   }
 }
 
@@ -389,12 +390,6 @@ a, a:visited, a:hover {
   }
 }
 
-@media (max-width: 63.9375em) {
-  .statistics {
-    padding: 1.5rem;
-  }
-}
-
 .statistics .indicator {
   background: rgba(20, 9, 9, 0.08);
   border-radius: 0.75rem;
@@ -407,5 +402,165 @@ a, a:visited, a:hover {
   border-radius: 0.75rem;
   display: inline-block;
   width: 80%;
+}
+
+@media (max-width: 63.9375em) {
+  .statistics {
+    padding: 1.5rem;
+  }
+}
+
+.about-project {
+  margin-bottom: 10rem;
+}
+
+.about-project h3 {
+  margin: 0;
+}
+
+@media (max-width: 39.9375em) {
+  .about-project h3 {
+    margin-top: 1rem;
+  }
+}
+
+.about-project p {
+  color: #7a7a7a;
+  font-size: 1.03rem;
+  line-height: 1.75;
+  margin: 2.25rem 0;
+  text-align: justify;
+}
+
+@media (max-width: 39.9375em) {
+  .about-project p {
+    font-size: 0.875rem;
+    margin: 1.5rem 0;
+  }
+}
+
+.about-project .pledge-card {
+  padding: 2rem;
+  position: relative;
+}
+
+.about-project .pledge-card .pledge-header {
+  margin-bottom: 1.75rem;
+}
+
+.about-project .pledge-card .pledge-header h4 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.about-project .pledge-card .pledge-header span {
+  color: #3cb4ac;
+  font-weight: bold;
+  text-align: right;
+}
+
+@media (max-width: 39.9375em) {
+  .about-project .pledge-card .pledge-header span {
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .about-project .pledge-card .pledge-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.about-project .pledge-card .pledge-description {
+  color: #7a7a7a;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+
+@media (max-width: 39.9375em) {
+  .about-project .pledge-card .pledge-description {
+    font-size: 0.875rem;
+    margin: 1.5rem 0;
+  }
+}
+
+.about-project .pledge-card .pledge-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-project .pledge-card .pledge-footer .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-project .pledge-card .pledge-footer .details h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.about-project .pledge-card .pledge-footer .details span {
+  color: #7a7a7a;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 39.9375em) {
+  .about-project .pledge-card .pledge-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .about-project .pledge-card .pledge-footer button {
+    margin-top: 2rem;
+  }
+}
+
+.about-project .pledge-card .pledge-footer .out-of-stock {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.about-project .pledge-card .pledge-overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+@media (max-width: 39.9375em) {
+  .about-project {
+    padding: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

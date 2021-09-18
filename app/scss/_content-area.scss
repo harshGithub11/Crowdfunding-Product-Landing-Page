@@ -23,6 +23,7 @@
 
     @include breakpoint-down(medium) {
         top: -80px;
+        width: 75%;
     }
 
     @include breakpoint-down(small) {
