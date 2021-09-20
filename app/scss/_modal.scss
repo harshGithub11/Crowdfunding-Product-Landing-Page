@@ -1,0 +1,244 @@
+.selection-modal {
+    
+    background: #fff;
+    
+    margin: 3rem auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50.75%;
+    
+    transform: translate(-50%, -30%) scale(0);
+    transition: 300ms ease-in-out;
+    
+    z-index: 5;
+
+    &.active {
+        transform: translate(-50%, -30%) scale(1);
+    }
+
+    .modal-title {
+
+        h2 {
+            margin: 0;
+
+            @include breakpoint-down(small) {
+                font-size: 1.2rem;
+            }
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    p {
+        color: $darkGray;
+        line-height: 1.5;
+        margin: 1.2rem 0 2.5rem 0;
+
+        @include breakpoint-down(small) {
+            font-size: 0.875rem;
+        }
+    }
+
+    .modal-pledge-card {
+        
+        padding: 2rem;
+        position: relative;
+
+        &-header {
+
+            align-items: center;
+            
+            &-title {
+                
+                input[type=radio] {
+                    margin: 0;
+                }
+
+                h4 {
+                    font-size: 1.2rem;
+                    margin: 0 1rem;
+
+                    @include breakpoint-down(small) {
+                        font-size: 1rem;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+    
+                span {
+                    color: $moderateCyan;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+
+                    @include breakpoint-down(small) {
+                        font-size: 1rem;
+                        margin: 0 1rem;
+                    }
+                }  
+
+                @include breakpoint-down(small) {
+                    flex-direction: column;
+                }
+            } 
+        }
+
+        &-detail-a{
+        
+            margin: 0;
+
+            h4 {
+                font-size: 1.2rem;
+                margin: 0 0.5rem;
+            }
+
+            span {
+                color: $darkGray;
+            }
+
+            @include breakpoint-down(small) {
+                display: none;
+            }
+        }
+
+        &-detail-b {
+
+            h4 {
+                font-size: 1.2rem;
+                margin: 0 0.5rem 0 0;
+            }
+
+            span {
+                color: $darkGray;
+            }
+
+            @include breakpoint-up(medium) {
+                display: none;
+            }
+        }
+
+        &-description {
+            color: $darkGray;
+            line-height: 1.5;
+            margin: 1.5rem 0 0 2.3rem;
+            text-align: justify;
+
+            @include breakpoint-down(small) {
+                font-size: 0.875rem;
+                margin: 1.5rem 0;
+            }
+        }
+
+        &-donate {
+            
+            color: $darkGray;
+            margin-top: 2rem;
+
+            &::before {
+                content: "";
+                border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+                display: block;
+                position: absolute;
+                left: 0;
+                width: 100%;
+            }
+
+            .pledge-section {
+                padding-top: 1.5rem;
+
+                span {
+                    @include breakpoint-down(small) {
+                        padding-bottom: 1.5rem;
+                    }
+                }
+
+                @include breakpoint-down(small) {
+                    flex-direction: column;
+                }
+            }
+
+            .pledge-amount {
+                @include breakpoint-down(small) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            .pledge-enter-amount {
+                border: solid 1px rgba(0, 0, 0, 0.3);
+                border-radius: 2rem;
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-right: 1rem;
+                padding: 1rem;
+                width: 7rem;
+        
+                span {
+                    margin: 0 0.5rem; 
+                    
+                    @include breakpoint-down(small) {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+        
+                input {
+                    border: none;
+                    font-family: 'Commissioner', 'sans-serif';
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    width: 2rem;
+                }    
+
+                @include breakpoint-down(small) {
+                    justify-content: space-evenly;
+                    padding: 0.5rem;
+                    width: 6rem;
+                }
+            }
+
+            .btn-amt {
+                background: $moderateCyan;
+                border: none;
+                border-radius: 2rem;
+                color: $white;
+                font-family: 'Commissioner', 'sans-serif';
+                font-size: 1rem;
+                font-weight: bold;
+                padding: 1rem;
+                width: 8rem;
+
+            }
+        
+            .btn-amt:hover {
+                background: $darkCyan;
+            }
+        }
+
+        @include breakpoint-down(small) {
+            padding: 1.25rem;
+        }
+    }
+
+    @include breakpoint-down(large) {
+        width: 55%;
+    }
+
+    @include breakpoint-down(medium) {
+        width: 75%;
+        margin: 2.5rem auto;
+    }
+
+    @include breakpoint-down(small) {
+        padding: 1.5rem;
+        width: 85%;
+    }
+}

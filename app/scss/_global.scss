@@ -47,6 +47,43 @@ a, a:visited, a:hover {
         align-items: center;
     }
 
+    &-ai-fs {
+        align-items: flex-start;
+    }
+
+    &-ai-bl {
+        align-items: baseline;
+    }
+
+    &-direction-c {
+        flex-direction: column;
+    }
+
+    &-direction-r {
+        flex-direction: row;
+    }
+
+}
+
+/* display styles */
+.display {
+
+    &-block {
+        display: block;
+    }
+
+    &-block {
+        display: block;
+    }
+
+    &-inline-block {
+        display: inline-block;
+    }
+
+    &-none {
+        display: none;
+    }
+
 }
 
 //hide-for-desktop 
@@ -100,4 +137,25 @@ a, a:visited, a:hover {
     flex-direction: column;
     margin-bottom: 1.25rem;
     padding: 3.125rem;
+}
+
+/* overlay */
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 300ms ease-in-out;
+    z-index: 4;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }

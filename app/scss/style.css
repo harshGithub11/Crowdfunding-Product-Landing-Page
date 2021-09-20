@@ -55,6 +55,49 @@ a, a:visited, a:hover {
           align-items: center;
 }
 
+.flex-ai-fs {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex-ai-bl {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.flex-direction-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-direction-r {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+/* display styles */
+.display-block {
+  display: block;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-none {
+  display: none;
+}
+
 @media (min-width: 64em) {
   .hide-for-desktop {
     display: none;
@@ -104,6 +147,28 @@ a, a:visited, a:hover {
           flex-direction: column;
   margin-bottom: 1.25rem;
   padding: 3.125rem;
+}
+
+/* overlay */
+#overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  z-index: 4;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .header {
@@ -445,6 +510,9 @@ a, a:visited, a:hover {
 }
 
 .about-project .pledge-card .pledge-header {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin-bottom: 1.75rem;
 }
 
@@ -555,12 +623,282 @@ a, a:visited, a:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 5;
+  z-index: 3;
 }
 
 @media (max-width: 39.9375em) {
   .about-project {
     padding: 1.5rem;
+  }
+}
+
+.selection-modal {
+  background: #fff;
+  margin: 3rem auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50.75%;
+  -webkit-transform: translate(-50%, -30%) scale(0);
+          transform: translate(-50%, -30%) scale(0);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  z-index: 5;
+}
+
+.selection-modal.active {
+  -webkit-transform: translate(-50%, -30%) scale(1);
+          transform: translate(-50%, -30%) scale(1);
+}
+
+.selection-modal .modal-title h2 {
+  margin: 0;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-title h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.selection-modal .modal-title button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0;
+}
+
+.selection-modal .modal-title button:hover {
+  cursor: pointer;
+}
+
+.selection-modal p {
+  color: #7a7a7a;
+  line-height: 1.5;
+  margin: 1.2rem 0 2.5rem 0;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal p {
+    font-size: 0.875rem;
+  }
+}
+
+.selection-modal .modal-pledge-card {
+  padding: 2rem;
+  position: relative;
+}
+
+.selection-modal .modal-pledge-card-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selection-modal .modal-pledge-card-header-title input[type=radio] {
+  margin: 0;
+}
+
+.selection-modal .modal-pledge-card-header-title h4 {
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-header-title h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.selection-modal .modal-pledge-card-header-title span {
+  color: #3cb4ac;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-header-title span {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-header-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.selection-modal .modal-pledge-card-detail-a {
+  margin: 0;
+}
+
+.selection-modal .modal-pledge-card-detail-a h4 {
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+.selection-modal .modal-pledge-card-detail-a span {
+  color: #7a7a7a;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-detail-a {
+    display: none;
+  }
+}
+
+.selection-modal .modal-pledge-card-detail-b h4 {
+  font-size: 1.2rem;
+  margin: 0 0.5rem 0 0;
+}
+
+.selection-modal .modal-pledge-card-detail-b span {
+  color: #7a7a7a;
+}
+
+@media (min-width: 40em) {
+  .selection-modal .modal-pledge-card-detail-b {
+    display: none;
+  }
+}
+
+.selection-modal .modal-pledge-card-description {
+  color: #7a7a7a;
+  line-height: 1.5;
+  margin: 1.5rem 0 0 2.3rem;
+  text-align: justify;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-description {
+    font-size: 0.875rem;
+    margin: 1.5rem 0;
+  }
+}
+
+.selection-modal .modal-pledge-card-donate {
+  color: #7a7a7a;
+  margin-top: 2rem;
+}
+
+.selection-modal .modal-pledge-card-donate::before {
+  content: "";
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.selection-modal .modal-pledge-card-donate .pledge-section {
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-donate .pledge-section span {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-donate .pledge-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-donate .pledge-amount {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.selection-modal .modal-pledge-card-donate .pledge-enter-amount {
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  padding: 1rem;
+  width: 7rem;
+}
+
+.selection-modal .modal-pledge-card-donate .pledge-enter-amount span {
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-donate .pledge-enter-amount span {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.selection-modal .modal-pledge-card-donate .pledge-enter-amount input {
+  border: none;
+  font-family: 'Commissioner', 'sans-serif';
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 2rem;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card-donate .pledge-enter-amount {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 0.5rem;
+    width: 6rem;
+  }
+}
+
+.selection-modal .modal-pledge-card-donate .btn-amt {
+  background: #3cb4ac;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-family: 'Commissioner', 'sans-serif';
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  width: 8rem;
+}
+
+.selection-modal .modal-pledge-card-donate .btn-amt:hover {
+  background: #147b74;
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal .modal-pledge-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 87.4375em) {
+  .selection-modal {
+    width: 55%;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .selection-modal {
+    width: 75%;
+    margin: 2.5rem auto;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .selection-modal {
+    padding: 1.5rem;
+    width: 85%;
   }
 }
 /*# sourceMappingURL=style.css.map */
