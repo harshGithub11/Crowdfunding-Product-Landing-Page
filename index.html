@@ -36,9 +36,14 @@
         <img src="/images/logo.svg" alt="logo">
       </a>
 
-      <a href="#" class="hamburger-menu hide-for-desktop">
+      <a href="#" hide-for-desktop">
 
-        <img src="./images/icon-hamburger.svg" id="hamburger">
+        <img 
+          src="./images/icon-hamburger.svg"
+          class="hide-for-desktop"
+          onclick='handleHamburgerClick(this)'
+          id="click-image"
+        >
         <!-- <span></span>
         <span></span>
         <span></span> -->
@@ -55,6 +60,18 @@
       </div>
 
     </nav>
+
+    <div id="mobile-links">
+        
+      <div class="header-links-mobile">
+
+        <a href="#about">About</a>
+        <a href="#card-pledge">Discover</a>
+        <a href="#card-project">Get Started</a>
+
+      </div>
+
+    </div>
 
   </header>
 

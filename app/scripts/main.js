@@ -1,7 +1,34 @@
 //------------------------------Hamburger button actions - Starts---------------------------------------
 
-const hamburgerImage = document.getElementById('hamburger');
-console.log(hamburgerImage);
+const mobileLinks = document.getElementById('mobile-links');
+const headerLinksMobile = document.querySelector('.header-links-mobile');
+
+const clickImage = document.getElementById('click-image');
+
+const handleHamburgerClick = (element) => {
+    console.log("clicked");
+    if(mobileLinks.classList.contains('fade-in')) {
+        console.log("if");
+        element.src = './images/icon-hamburger.svg';
+        mobileLinks.classList.remove('fade-in');
+        headerLinksMobile.classList.remove('active');
+    
+    } else {
+        console.log("else");
+        element.src = './images/icon-close-menu.svg';
+        mobileLinks.classList.add('fade-in');
+        headerLinksMobile.classList.add('active');
+
+    }
+
+}
+
+mobileLinks.addEventListener('click', (event) => {
+    mobileLinks.classList.remove('fade-in');
+    headerLinksMobile.classList.remove('active');
+    clickImage.src = './images/icon-hamburger.svg';
+
+})
 
 //------------------------------Hamburger button actions - Ends---------------------------------------
 
