@@ -2,7 +2,7 @@
     
     background: #fff;
     
-    margin: 3rem auto;
+    margin: 2rem auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,7 +11,7 @@
     transform: translate(-50%, -30%) scale(0);
     transition: 300ms ease-in-out;
     
-    z-index: 5;
+    z-index: 1;
 
     &.active {
         transform: translate(-50%, -30%) scale(1);
@@ -68,6 +68,12 @@
                 h4 {
                     font-size: 1.2rem;
                     margin: 0 1rem;
+                    transition: all 200ms ease-in-out;
+                    
+                    &:hover {
+                        color: $moderateCyan;
+                        cursor: pointer;
+                    }
 
                     @include breakpoint-down(small) {
                         font-size: 1rem;
@@ -223,6 +229,18 @@
             }
         }
 
+        &-overlay {
+            background-color: rgba($color: #ffffff, $alpha: 0.5);
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 3;
+        }
+
         @include breakpoint-down(small) {
             padding: 1.25rem;
         }
@@ -239,6 +257,7 @@
 
     @include breakpoint-down(small) {
         padding: 1.5rem;
+        top: 73%;
         width: 85%;
     }
 }

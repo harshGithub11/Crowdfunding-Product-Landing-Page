@@ -22,22 +22,9 @@
         }
 
     }
-    
-    a {
-        > span {
 
-            background-color: white;
-            border-radius: 2px;
-            display: block;
-            
-            height: 4px;
-            width: 20px;
-
-
-            &:not(:last-child) {
-                margin-bottom: 4px;
-            }
-        }
+    .hamburger-menu {
+        cursor: pointer;
     }
 
     &-links {

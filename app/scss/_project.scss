@@ -43,6 +43,8 @@
 
     &-button-container {
         
+        transition: all 200ms ease-in-out;
+
         img {
             position: relative;
             left: 20%;
@@ -56,6 +58,10 @@
             @include breakpoint-down(large) {
                 display: none;
             }
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
