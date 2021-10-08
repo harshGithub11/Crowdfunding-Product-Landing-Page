@@ -54,7 +54,7 @@ This challenge was fun. I got to learn a lot. I got to hang around with the basi
 
 ## Acknowledgments
 
-I am grateful to freeCodeCamp and Jessica from [@thecodercoder](https://www.twitter.com/thecodercoder). Thank you so much freeCodeCamp and Jessica for telling about this beautiful platform: Frontend Mentor. I got to know about this platform from freeCodeCamp's video in which Jessica completed the whole challenge from Frontend Mentor. 
+I am grateful to [@freeCodeCamp](https://twitter.com/freeCodeCamp) and Jessica from [@thecodercoder](https://www.twitter.com/thecodercoder). Thank you so much freeCodeCamp and Jessica for telling about this beautiful platform: Frontend Mentor. I got to know about this platform from freeCodeCamp's video in which Jessica completed the whole challenge from Frontend Mentor. 
 
 I must say Jessica is a good teacher and I got to learn a lot from her videos.
 
