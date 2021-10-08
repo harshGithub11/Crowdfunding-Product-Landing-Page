@@ -1,0 +1,75 @@
+.project {
+    position: relative;
+    
+    &-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &-description {
+        text-align: center;
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+
+            @include breakpoint-down(small) {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        p {
+            color: $darkGray;    
+            margin: 0.5rem 0;
+            font-size: 1.03rem;    
+
+            @include breakpoint-down(small) {
+                font-size: 0.875rem;
+                margin: 1rem 0 0 0;
+            }
+        }
+    }
+
+    &-buttons {
+        margin-top: 2rem;     
+        
+        @include breakpoint-down(large) {
+            margin: 2rem auto 0 auto;
+        }
+    }
+
+    &-button-container {
+        
+        transition: all 200ms ease-in-out;
+
+        img {
+            position: relative;
+            left: 20%;
+        }
+
+        div {
+            span {
+                margin-left: 20px;
+            }
+
+            @include breakpoint-down(large) {
+                display: none;
+            }
+        }
+
+        .bookmarked {
+            color: $darkCyan
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @include breakpoint-down(small) {
+        padding: 1.5625rem 0.7656rem;
+    }
+}

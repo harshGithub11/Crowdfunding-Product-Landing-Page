@@ -1,0 +1,33 @@
+.content-area {
+    border-radius: 8px;
+    
+    flex-direction: column;
+    /*
+        Centering the absolutely positioned div
+        margin-left, margin-right: auto, position: absolute,
+        left, right: 0 and width: any
+    */
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    top: -95px;
+    right: 0;
+    left: 0;
+
+    width: 50.75%;
+
+    @include breakpoint-down(large) {
+        width: 55%;
+    }
+
+    @include breakpoint-down(medium) {
+        top: -80px;
+        width: 75%;
+    }
+
+    @include breakpoint-down(small) {
+        top: -55px;
+        width: 85%;
+    }
+}

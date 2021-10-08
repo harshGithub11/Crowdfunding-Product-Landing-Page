@@ -1,0 +1,132 @@
+.about-project {
+
+    margin-bottom: 10rem;
+
+    h3{
+        margin: 0;
+
+        @include breakpoint-down(small) {
+            margin-top: 1rem;
+        }
+    }
+
+    p {
+        color: $darkGray;
+        font-size: 1.03rem;
+        line-height: 1.75;
+        margin: 2.25rem 0;
+        text-align: justify;
+
+        @include breakpoint-down(small) {
+            font-size: 0.875rem;
+            margin: 1.5rem 0;
+        }
+    }
+
+    .pledge-card {
+
+        padding: 2rem;
+        position: relative;
+
+        .pledge-header {
+            
+            align-items: baseline;
+            margin-bottom: 1.75rem;
+            
+            h4 {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+
+            span {
+                color: $moderateCyan;
+                font-weight: bold;
+                text-align: right;
+                
+                @include breakpoint-down(small) {
+                    
+                    margin-top: 0.5rem;
+                    text-align: left;
+                }
+            }
+
+            @include breakpoint-down(small) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .pledge-description {
+           
+            color: $darkGray;
+            font-size: 1rem;
+            line-height: 1.75;
+            margin: 1.5rem 0;
+            text-align: justify;
+
+            @include breakpoint-down(small) {
+                font-size: 0.875rem;
+                margin: 1.5rem 0;
+            }
+
+        }
+        
+        .pledge-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .details {
+                display: flex;
+                align-items: center;
+
+                h2 {
+                    font-size: 1.8rem;
+                    margin: 0;
+                }
+
+                span {
+                    color: $darkGray;
+                    font-size: 1rem;
+                    line-height: 1.75;
+                    margin-left: 0.5rem;
+                }
+
+            }
+
+            @include breakpoint-down(small) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            button {
+                
+                @include breakpoint-down(small) {
+                    margin-top: 2rem;
+                }
+            }
+
+            .out-of-stock {
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .pledge-overlay {
+            
+            background-color: rgba($color: #ffffff, $alpha: 0.5);
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 0;
+        }
+
+    }
+
+    @include breakpoint-down(small) {
+        padding: 1.5rem;
+    }
+}

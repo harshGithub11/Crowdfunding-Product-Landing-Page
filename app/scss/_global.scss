@@ -13,11 +13,11 @@ html {
 
 body {
     
+    background: #fafafa;
     font-family: 'Commissioner', sans-serif;
     line-height: 1.3;
     margin: 0;
     padding: 0;
-
 }
 
 a, a:visited, a:hover {
@@ -46,12 +46,49 @@ a, a:visited, a:hover {
         align-items: center;
     }
 
+    &-ai-fs {
+        align-items: flex-start;
+    }
+
+    &-ai-bl {
+        align-items: baseline;
+    }
+
+    &-direction-c {
+        flex-direction: column;
+    }
+
+    &-direction-r {
+        flex-direction: row;
+    }
+
+}
+
+/* display styles */
+.display {
+
+    &-block {
+        display: block;
+    }
+
+    &-block {
+        display: block;
+    }
+
+    &-inline-block {
+        display: inline-block;
+    }
+
+    &-none {
+        display: none;
+    }
+
 }
 
 //hide-for-desktop 
 .hide-for-desktop {
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(medium) {
         display: none;
     }
 
@@ -60,10 +97,70 @@ a, a:visited, a:hover {
 //hide-for-mobile 
 .hide-for-mobile {
     
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(small) {
         display: none;
     }
 
 }
 
+.btn {
+    background-color: $moderateCyan;
+    border: none;
+    border-radius: 3rem;
+    color: $white;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1.125rem 2.5rem;
+}
 
+.btn:hover {
+    background-color: $darkCyan;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.btn-light {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+    color: $darkGray;
+}
+
+.btn-light:hover {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+    color: $black;
+}
+
+.card {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 0.1px $darkGray;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+    padding: 3.125rem;
+}
+
+/* overlay */
+#overlay {
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    transition: 300ms ease-in-out;
+}
+
+#overlay.active {
+    opacity: 1;
+    z-index: 4;
+    pointer-events: all;
+}

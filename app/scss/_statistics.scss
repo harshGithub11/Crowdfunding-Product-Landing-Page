@@ -1,0 +1,103 @@
+.statistics{
+    
+    .details {    
+        box-sizing: border-box;
+        
+        @include breakpoint-down(large) {
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        @include breakpoint-down(small) {
+            flex-direction: column;
+        }
+    }
+
+    /*
+        border-right to be applied to all the divs 
+        except the last one
+    */
+    .details > div:not(:last-child) {
+        border-right: solid 1px rgba(20, 9, 9, 0.3); 
+
+        @include breakpoint-down(small) {
+            border-right: none;
+
+            &::after {
+                content: "";  
+                display: block;
+                margin: 0 auto;
+                width: 35%;
+                padding-top: 1.25rem;
+                border-bottom: 1px solid rgba(20, 9, 9, 0.3);
+            }
+        }
+    }
+
+    /* 
+        padding to be applied for the second and 
+        third div only
+    */
+    .details > div:not(:first-child) {
+        padding: 0 6rem 0 3rem;
+
+        @include breakpoint-down(large) {
+            padding: 0 1rem;
+        }
+
+        @include breakpoint-down(small) {
+            padding-bottom: 1.25rem;
+        }
+    }
+
+    &-block {
+
+        padding-right: 3.125rem;
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 0;
+
+            @include breakpoint-down(small) {
+                font-size: 1.4rem;
+            }
+        }
+
+        p {
+            color: $darkGray;    
+            margin: 0.5rem 0 0 0;
+            font-size: 1rem;    
+
+            @include breakpoint-down(small) {
+                font-size: 0.875rem;
+            }
+        }
+
+        @include breakpoint-down(large) {
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        @include breakpoint-down(small) {
+            padding-bottom: 1.25rem;
+        }
+    }
+
+    .indicator {
+        background: rgba(20, 9, 9, 0.08);
+        border-radius: 0.75rem;
+        height: 0.8rem;
+        margin-top: 2.5rem;
+
+        &-filled {
+            background-color: $moderateCyan;
+            border-radius: 0.75rem;
+            display: inline-block;
+            width: 80%;
+        }
+    }
+
+    @include breakpoint-down(medium) {
+        padding: 1.5rem;
+    }
+}
