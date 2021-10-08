@@ -386,6 +386,10 @@ a, a:visited, a:hover {
   }
 }
 
+.project-button-container .bookmarked {
+  color: #147b74;
+}
+
 .project-button-container:hover {
   cursor: pointer;
 }

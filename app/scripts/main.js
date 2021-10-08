@@ -1,20 +1,37 @@
 //------------------------------Hamburger button actions - Starts---------------------------------------
 
+//Parent div containing the hamburger menu links visible for a certain screen size only
 const mobileLinks = document.getElementById('mobile-links');
+
+//Child div of mobileLiks containing all the links
 const headerLinksMobile = document.querySelector('.header-links-mobile');
 
+/*
+    Actually images are given for the hamburger menu button and its corroesponding close button,
+    so getting the img element which is having an id click image; to be used further. 
+*/
 const clickImage = document.getElementById('click-image');
 
+/*
+    A javascript function to handle the click actions of the hamburger button(image), you can see the index.html file
+    there I have specified this function to be called on the hamburger button(image) click.
+
+    Following function opens the hamburger menu and an overlay if them menu has been closed or closes the hamburger menu
+    and removes the overlay if it's open.
+
+    Parameter element is the one which has been passed as 'this' to whichever element has called this function. (Here in
+    this case the hamburger button(image)).
+*/
 const handleHamburgerClick = (element) => {
-    console.log("clicked");
-    if(mobileLinks.classList.contains('fade-in')) {
-        console.log("if");
+
+    if (mobileLinks.classList.contains('fade-in')) {
+
         element.src = './images/icon-hamburger.svg';
         mobileLinks.classList.remove('fade-in');
         headerLinksMobile.classList.remove('active');
-    
+
     } else {
-        console.log("else");
+
         element.src = './images/icon-close-menu.svg';
         mobileLinks.classList.add('fade-in');
         headerLinksMobile.classList.add('active');
@@ -23,6 +40,11 @@ const handleHamburgerClick = (element) => {
 
 }
 
+/*
+    Adding click event to all the links which gets opened on the hamburger button(image) click; taking us to the respective
+    section of the web page based on the clicked link, i.e. (About, Discover, Get Started), thereby closing the hamburger
+    menu.
+*/
 mobileLinks.addEventListener('click', (event) => {
     mobileLinks.classList.remove('fade-in');
     headerLinksMobile.classList.remove('active');
@@ -34,6 +56,24 @@ mobileLinks.addEventListener('click', (event) => {
 
 //------------------------------Bookmark button actions - Starts---------------------------------------
 
+//This contains the bookmark image as well as div
+const bookmarkContainer = document.querySelector('.project-button-container');
+
+const bookmarkImage = document.getElementById('bookmark-img');
+const bookmarkText = document.getElementById('bookmark-text');
+
+bookmarkContainer.addEventListener('click', () => {
+    bookmarkImage.classList.toggle('bookmarked');
+    bookmarkText.classList.toggle('bookmarked');
+
+    if(bookmarkImage.classList.contains('bookmarked')) {
+        bookmarkImage.src = './images/icon-bookmarked.svg';
+        bookmarkText.innerText = "Bookmarked";
+    } else {
+        bookmarkImage.src = './images/icon-bookmark.svg';
+        bookmarkText.innerText = "Bookmark";
+    }
+})
 
 //------------------------------Bookmark button actions - Ends--------------------------------------
 
@@ -97,16 +137,16 @@ closeButton.addEventListener('click', () => {
     as well.
 */
 overlay.addEventListener('click', (event) => {
-    
+
     /* 
-        Line no 35 ensures that if the user clicks on modal it must not be closed, but should be closed only and only 
+        Following code ensures if the user clicks on modal it must not be closed, but should be closed only and only 
         when the div with id overlay has been clicked (Listen for only parent events, not the child)
-    */
-    if(event.currentTarget === event.target) {  //Awesome - source: https://simplernerd.com/js-click-parent/ 
+     */
+    if (event.currentTarget === event.target) {  //Awesome - source: https://simplernerd.com/js-click-parent/ 
         overlay.classList.remove('active');
         modal.classList.remove('active');
 
-        if(messageModal.classList.contains('active'))
+        if (messageModal.classList.contains('active'))
             messageModal.classList.remove('active');
     }
 })
@@ -115,11 +155,15 @@ overlay.addEventListener('click', (event) => {
 
 //-------------------------------Radio button related actions - Starts---------------------------------------
 
+/*
+    The following code ensures that based on the pledge selected by the user, the donate section corroesponding to the 
+    pledge will be visible to the user.
+*/
 const radioButtons = document.querySelectorAll('.radio-btn');
 const donateSections = document.querySelectorAll('.modal-pledge-card-donate');
 
 const handleRadioClick = () => {
-    
+
     for (let i = 0; i < radioButtons.length; i++) {
 
         if (radioButtons[i].checked) {
@@ -127,47 +171,9 @@ const handleRadioClick = () => {
         } else if (!donateSections[i].classList.contains('display-none')) {
             donateSections[i].classList.add('display-none');
         }
-    
+
     };
 
 }
 
 //-------------------------------Radio button related actions - Ends---------------------------------------
-
-//-------------------------------Continue button actions - Starts---------------------------------------
-
-const continueButtons = document.querySelectorAll('.btn-amt');
-const inputFields = document.querySelectorAll('.num-field');
-
-const handleContinueClick = (event) => {
-    console.log(event.target.id);
-}
-
-const validateAmount = (id, amount) => {
-    
-    let isValid = true;
-
-    switch(id) {
-        case 1: 
-            if(amount < 25) {
-                isValid = false;
-            }
-            break;
-        case 2: 
-            if(amount < 75) {
-                isValid = false;
-            }
-            break;
-        default:
-            break;
-    } 
-
-    return isValid;
-}
-
-//Adding click event listener for each button
-continueButtons.forEach(continueButton => {
-    continueButton.addEventListener('click', handleContinueClick);
-})
-
-//-------------------------------Continue button actions - Ends---------------------------------------

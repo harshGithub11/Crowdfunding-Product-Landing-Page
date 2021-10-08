@@ -60,6 +60,10 @@
             }
         }
 
+        .bookmarked {
+            color: $darkCyan
+        }
+
         &:hover {
             cursor: pointer;
         }

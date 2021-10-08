@@ -28,8 +28,10 @@
 
 <body>
 
+  <!--Header section starts-->
   <header class="header">
 
+    <!--Navbar-->
     <nav class="flex flex-jc-sb flex-ai-c">
 
       <a href="/">
@@ -44,10 +46,6 @@
           onclick='handleHamburgerClick(this)'
           id="click-image"
         >
-        <!-- <span></span>
-        <span></span>
-        <span></span> -->
-        
 
       </a>
 
@@ -61,6 +59,7 @@
 
     </nav>
 
+    <!--Mobile hamburger links -->
     <div id="mobile-links">
         
       <div class="header-links-mobile">
@@ -74,10 +73,12 @@
     </div>
 
   </header>
+  <!--Header section ends-->
 
   <main>
 
     <section>
+      <!--Content area starts-->
       <div class="content">
 
         <div class="content-area flex">
@@ -94,11 +95,14 @@
             </div>
 
             <div class="project-buttons flex flex-ai-c flex-jc-sb">
+            
               <button type="button" class="btn reward-btn">Back this project</button>
+            
               <div class="project-button-container flex flex-ai-c">
-                <img src="./images/icon-bookmark.svg" alt="bookmark">
-                <div class="btn btn-light"><span>Bookmark</span></div>
+                <img src="./images/icon-bookmark.svg" alt="bookmark" id="bookmark-img">
+                <div class="btn btn-light"><span id="bookmark-text">Bookmark</span></div>
               </div>
+            
             </div>
 
           </div>
@@ -145,6 +149,7 @@
               to allow notepads, pens, and USB sticks to be stored under the stand.
             </p>
 
+            <!--Different pledge options starts-->
             <div class="pledge-card card" id="card-pledge">
 
               <div class="pledge-header flex flex-ai-c flex-jc-sb">
@@ -168,6 +173,7 @@
 
               </div>
             </div>
+            <!--Different pledge options ends-->
 
             <div class="pledge-card card">
 
@@ -221,6 +227,8 @@
           </div>
         </div>
       </div>
+
+    <!--Content area ends-->
     </section>
 
     <section>
